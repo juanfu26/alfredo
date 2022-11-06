@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  alfredo:
+    container_name: alfredo
+    image: juanfu26/alfredo
+    build: 
+      context: ../
+    expose: 
+      - 80
+    networks:
+      - reverseproxy
+
+networks:
+  reverseproxy:
+    external: true
