@@ -1,14 +1,11 @@
 from fastapi import FastAPI
+from api import whController
 
 app = FastAPI(root_path="/alfredo")
+
+app.include_router(whController.router)
 
 @app.get("/")
 def root():
     return {"message": "Hello world"}
 
-@app.post('/webhook')
-def webhook():
-  return {
-        "fulfillmentText": 'This is from the replit webhook',
-        "source": 'webhook'
-    }
