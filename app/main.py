@@ -1,14 +1,6 @@
 from fastapi import FastAPI
+from .api.chat.controller import router
 
-app = FastAPI(root_path="/alfredo")
+app = FastAPI(root_path="/")
 
-@app.get("/")
-def root():
-    return {"message": "Hello world"}
-
-@app.post('/webhook')
-def webhook():
-  return {
-        "fulfillmentText": 'This is from the replit webhook',
-        "source": 'webhook'
-    }
+app.include_router(router)
