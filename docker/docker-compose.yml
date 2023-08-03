@@ -12,3 +12,4 @@ services:
       - 8080:80
     volumes:
       - ../app:/code/app
+      - ../data:/data
