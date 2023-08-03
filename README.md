@@ -1,4 +1,4 @@
 # Alfredo
-Chatbot webhook to be used with Dialogflow
+REST API for chat with OpenAI
 
 
