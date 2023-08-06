@@ -4,9 +4,9 @@ services:
   alfredo:
     container_name: alfredo
     image: juanfu26/alfredo
-    build: 
+    build:
       context: ../
-    expose: 
+    expose:
       - 80
     networks:
       - reverseproxy

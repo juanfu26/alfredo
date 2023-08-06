@@ -4,12 +4,12 @@ services:
   alfredo:
     container_name: alfredo
     image: juanfu26/alfredo
-    build: 
+    build:
       context: ../
-    environment:
-      - OPENAI_API_KEY=${OPENAI_API_KEY}
-    ports: 
+    env_file: .env
+    ports:
       - 8080:80
     volumes:
       - ../app:/code/app
       - ../data:/data
+      - ../persist:/persist
